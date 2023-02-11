@@ -15,5 +15,6 @@ Built with
 Author
 
 - Frontend Mentor - @RalfiSlask
+- GitHub - https://github.com/RalfiSlask
 
 
