@@ -68,7 +68,7 @@ const getQuoteAPI = async () => {
 
 const getTimeAPI = async () => {
     try {
-        const url = "http://worldtimeapi.org/api/ip"
+        const url = "https://worldtimeapi.org/api/ip"
         const response = await fetch(url);
         const jsonResponse = await response.json();
 
