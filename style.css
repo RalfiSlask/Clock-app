@@ -177,6 +177,7 @@ p {
     backdrop-filter: blur(20.3871px);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .more-panel {
