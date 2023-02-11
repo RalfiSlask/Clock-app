@@ -36,7 +36,6 @@ const clickingPopupButton = () => {
             popup_button_text.innerHTML = "MORE";
             popup_button.innerHTML = `<svg width="14" height="9" xmlns="http://www.w3.org/2000/svg" class="arrow"><path stroke="#FFF" stroke-width="2" fill="none" d="m1 1 6 6 6-6"/></svg>`
             isButtonClicked = false;
-           
         }
     }
 }
@@ -86,7 +85,6 @@ const getTimeAPI = async () => {
         const timenumber = Number(time.replace(":", "."))
 
         // getting weeknumber from currentDate
-      
         currentDate = new Date();
         startDate = new Date(currentDate.getFullYear(), 0, 1);
         const days = Math.floor((currentDate - startDate) /
@@ -132,39 +130,34 @@ const getTimeAPI = async () => {
         <p class="time-zone">${abbreviation}</p>`
         greeting.innerHTML = `${greet}, ITS CURRENTLY`
 
-        // for the container that opens up when we press more button
         popup_container.innerHTML = 
         `<div class="more-panel">
-        <div class="left-container">
-            <div class="panel panel--currtime">
-            <div class="heading">CURRENT TIMEZONE</div>
-            <div class="text curr-timezone">${continent}/${city}</div>
+            <div class="left-container">
+                <div class="panel panel--currtime">
+                <div class="heading">CURRENT TIMEZONE</div>
+                <div class="text curr-timezone">${continent}/${city}</div>
+                </div>
+                <div class="panel panel--doty">
+                <div class="heading">DAY OF THE YEAR</div>
+                <div class="text doty">${daoy}</div>
+                </div>
             </div>
-            <div class="panel panel--doty">
-            <div class="heading">DAY OF THE YEAR</div>
-            <div class="text doty">${daoy}</div>
+            <div class="line"></div>
+            <div class="right-container">
+                <div class="panel panel--dotw">
+                <div class="heading">DAY OF THE WEEK</div>
+                <div class="text dotw">${daow}</div>
+                </div>
+                <div class="panel panel--weeknumb">
+                <div class="heading">WEEK NUMBER</div>
+                <div class="text weeknumb">${weekNumber}</div>
+                </div>
             </div>
-        </div>
-        <div class="line"></div>
-        <div class="right-container">
-            <div class="panel panel--dotw">
-            <div class="heading">DAY OF THE WEEK</div>
-            <div class="text dotw">${daow}</div>
-            </div>
-            <div class="panel panel--weeknumb">
-            <div class="heading">WEEK NUMBER</div>
-            <div class="text weeknumb">${weekNumber}</div>
-            </div>
-        </div>
-    </div>`
+        </div>`
     } catch(error) {
         console.log(error);
     }
 }
-
-
-
-/* setInterval(getTime, 1000); */
 
 const getCountryCity = async () => {
     try {
